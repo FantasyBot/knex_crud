@@ -14,6 +14,9 @@ const app = express();
 app.use(bodyParser.json({ limit: '100mb' }));
 
 // routing
+app.get('/', (req, res) => {
+  res.send('App is working...');
+});
 app.use(...companies);
 app.use(...users);
 
